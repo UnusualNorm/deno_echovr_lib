@@ -5,14 +5,14 @@ import { Message } from "../serializer.ts";
 interface ErrorInfo {
   type: string;
   id: string;
-  errorCode: number;
+  errorcode: number;
   error: string;
 }
 
 const errorInfoSchema = z.object({
   type: z.string(),
   id: z.string(),
-  errorCode: z.number(),
+  errorcode: z.number(),
   error: z.string(),
 }).strict();
 
@@ -28,7 +28,7 @@ export class SNSConfigFailurev2 extends Message<{
       errorInfo: {
         type: "",
         id: "",
-        errorCode: 0,
+        errorcode: 0,
         error: "",
       },
     };
