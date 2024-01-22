@@ -6,6 +6,7 @@ export { SNSConfigFailurev2 } from "./messages/SNSConfigFailurev2.ts";
 export { SNSConfigRequestv2 } from "./messages/SNSConfigRequestv2.ts";
 export { SNSConfigSuccessv2 } from "./messages/SNSConfigSuccessv2.ts";
 export { STcpConnectionUnrequireEvent } from "./messages/STcpConnectionUnrequireEvent.ts";
+export { UnknownMessage } from "./messages/UnknownMessage.ts";
 
 export {
   deserializeMessages,

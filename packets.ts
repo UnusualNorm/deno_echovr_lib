@@ -5,6 +5,7 @@ import { SNSConfigFailurev2 } from "./messages/SNSConfigFailurev2.ts";
 import { SNSConfigRequestv2 } from "./messages/SNSConfigRequestv2.ts";
 import { SNSConfigSuccessv2 } from "./messages/SNSConfigSuccessv2.ts";
 import { STcpConnectionUnrequireEvent } from "./messages/STcpConnectionUnrequireEvent.ts";
+import { UnknownMessage } from "./messages/UnknownMessage.ts";
 
 export const PACKET_HEADER = 0xbb8ce7a278bb40f6n;
 
@@ -21,7 +22,7 @@ export const symbolToMessage = (
     case symbolCache["STcpConnectionUnrequireEvent"]:
       return new STcpConnectionUnrequireEvent();
     default:
-      throw new Error(`Unknown symbol ${symbol}`);
+      return new UnknownMessage();
   }
 };
 
