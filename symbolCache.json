@@ -1,5 +1,6 @@
 {
-  "SNSConfigRequestv2": -9041364331368070280,
-  "SNSConfigSuccessv2": -5058194012104830958,
-  "SNSConfigFailurev2": -7032236248796415888
+  "SNSConfigFailurev2": "-7032236248796415888",
+  "SNSConfigRequestv2": "-9041364331368070280",
+  "SNSConfigSuccessv2": "-5058194012104830958",
+  "STcpConnectionUnrequireEvent": "4892763224382631652"
 }

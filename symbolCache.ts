@@ -1,20 +1,14 @@
-import { JSONBig, path } from "./deps.ts";
-import symbolCacheDummy from "./symbolCache.json" with { type: "json" };
-
-const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
-const symbolCachePath = path.join(__dirname, "symbolCache.json");
-const symbolCacheString = await Deno.readTextFile(symbolCachePath);
+import symbolCacheStrings from "./symbolCache.json" with { type: "json" };
 
 const symbolCache = Object
   .fromEntries(
     Object.entries(
-      JSONBig({ storeAsString: true })
-        .parse(symbolCacheString),
+      symbolCacheStrings,
     ).map(([key, value]) => [
       key,
-      BigInt(value as string),
+      BigInt(value),
     ]),
-  ) as Record<keyof typeof symbolCacheDummy, bigint>;
+  ) as Record<keyof typeof symbolCacheStrings, bigint>;
 export { symbolCache };
 
 export const hasCachedSymbol = (
